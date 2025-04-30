@@ -3,7 +3,7 @@ name: Benchmark WebSocket Libraries
 on:
   workflow_dispatch: # Allow manual trigger
   schedule:
-    - cron: '43 1 * * *' # Run daily at 10:38 KST (10:38 UTC)
+    - cron: '43 1 * * *' # Run daily at 10:43 KST (01:43 UTC)
 
 jobs:
   benchmark:
