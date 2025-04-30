@@ -24,7 +24,7 @@ func gobwasEchoHandler(conn net.Conn) {
 
 	// Use Reader and Writer for message handling
 	reader := wsutil.NewReader(conn, ws.StateServerSide)
-	writer := wsutil.NewWriter(conn, ws.StateServerSide, ws.OpText) // Assuming text messages
+	writer := wsutil.NewWriter(conn, ws.StateServerSide, ws.OpBinary) // Assuming text messages
 
 	var buffer []byte = make([]byte, 8192)
 	for {
