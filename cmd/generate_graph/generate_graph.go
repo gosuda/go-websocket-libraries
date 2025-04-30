@@ -76,8 +76,8 @@ func main() {
 	p.Y.Label.Text = "Throughput (MB/s)"
 
 	// Use a time ticker for the X-axis
-	p.X.Tick.Marker = plot.TimeTicks{Format: "15:04:05"} // Format for time (HH:MM:SS)
-	p.X.Tick.Label.Rotation = 0.8                        // Rotate labels more to prevent overlap
+	p.X.Tick.Marker = plot.TimeTicks{Format: time.RFC3339} // Format for time (HH:MM:SS)
+	p.X.Tick.Label.Rotation = 0.8                          // Rotate labels more to prevent overlap
 	// p.X.Tick.Label.XAlign = vg.Right // Removed due to undefined error
 	// p.X.Tick.Label.YAlign = vg.Center // Removed due to undefined error
 
