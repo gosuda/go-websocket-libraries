@@ -39,7 +39,7 @@ jobs:
         run: |
           mkdir -p results
           cp benchmark/benchmark_history.json results/
-          cp benchmark/benchmark_performance.png results/
+          cp benchmark_performance.png results/
           cp go.mod results/
           cp go.sum results/
           cp README.md results/
