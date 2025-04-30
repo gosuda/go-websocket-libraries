@@ -12,12 +12,6 @@ Go WebSocket Library Comparison
 
 **Latest Benchmark Results:**
 
-
-
-
-
-
-
 <!-- BENCHMARK_TABLE_START -->
 **Last Updated:** Wed, 30 Apr 2025 02:26:20 UTC
 
@@ -30,12 +24,6 @@ Go WebSocket Library Comparison
 | [lxzan/gws](https://github.com/lxzan/gws) | v1.8.8 | 511.42 | 15.16 |
 <!-- BENCHMARK_TABLE_END -->
 
-
-
-
-
-
-
-**Performance Over Time (Connections/Second):**
+**Performance Over Time: Throughput (MB/s):**
 
 ![Benchmark Performance Graph](benchmark_performance.png)

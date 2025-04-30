@@ -76,8 +76,8 @@ func main() {
 	p.Y.Label.Text = "Throughput (MB/s)"
 
 	// Use a time ticker for the X-axis
-	p.X.Tick.Marker = plot.TimeTicks{Format: "2006-01-02\n15:04"} // Format for date and time
-	p.X.Tick.Label.Rotation = 0.4                                 // Rotate labels slightly if they overlap
+	p.X.Tick.Marker = plot.TimeTicks{Format: "15:04:05"} // Format for time (HH:MM:SS)
+	p.X.Tick.Label.Rotation = 0.8                        // Rotate labels more to prevent overlap
 	// p.X.Tick.Label.XAlign = vg.Right // Removed due to undefined error
 	// p.X.Tick.Label.YAlign = vg.Center // Removed due to undefined error
 
@@ -116,7 +116,7 @@ func main() {
 	p.Legend.Left = false // Position legend top-right
 
 	// Save the plot to a PNG file.
-	if err := p.Save(4*vg.Inch, 4*vg.Inch, graphPath); err != nil { // Adjust size as needed
+	if err := p.Save(8*vg.Inch, 6*vg.Inch, graphPath); err != nil { // Increased size for better resolution/layout
 		log.Fatalf("Could not save plot: %v", err)
 	}
 

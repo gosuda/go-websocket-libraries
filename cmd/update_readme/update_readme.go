@@ -26,8 +26,7 @@ const (
 	historyPath       = "benchmark/benchmark_history.json"
 	tableStartMarker  = "<!-- BENCHMARK_TABLE_START -->"
 	tableEndMarker    = "<!-- BENCHMARK_TABLE_END -->"
-	readmeTemplateStr = `
-{{.TableStartMarker}}
+	readmeTemplateStr = `{{.TableStartMarker}}
 **Last Updated:** {{ .Timestamp }}
 
 | Library                                         | Version         | Throughput (MB/s) | Avg Latency (ms) |
@@ -35,8 +34,7 @@ const (
 {{- range .Results }}
 | [{{ .LibraryName }}](https://github.com/{{ .LibraryName }}) | {{ .Version }} | {{ printf "%.2f" .ThroughputMBps }} | {{ printf "%.2f" .LatencyMs }} |
 {{- end }}
-{{.TableEndMarker}}
-`
+{{.TableEndMarker}}`
 )
 
 var readmeTemplate = template.Must(template.New("readme").Parse(readmeTemplateStr))
