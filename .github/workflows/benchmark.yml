@@ -37,6 +37,7 @@ jobs:
       
       - name: Update results
         run: |
+          mkdir -p results
           cp benchmark/benchmark_history.json results/
           cp benchmark/benchmark_performance.png results/
           cp go.mod results/
