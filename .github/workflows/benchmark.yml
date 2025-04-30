@@ -1,0 +1,44 @@
+name: Benchmark WebSocket Libraries
+
+on:
+  workflow_dispatch: # Allow manual trigger
+  schedule:
+    - cron: '43 1 * * *' # Run daily at 10:38 KST (10:38 UTC)
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Install dependencies and update libraries
+        run: |
+          go get -u all
+          go mod tidy # Ensure go.mod and go.sum are consistent
+
+      - name: Run Benchmark
+        run: go run ./benchmark/...
+        # The benchmark main.go will fetch latest versions and save results to benchmark_history.json
+
+      - name: Generate Performance Graph
+        run: go run ./cmd/generate_graph
+        # Assumes cmd/generate_graph/main.go reads benchmark_history.json and outputs benchmark_performance.png
+
+      - name: Update README Table
+        run: go run ./cmd/update_readme
+        # Assumes cmd/update_readme/main.go reads benchmark_history.json and updates README.md
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Update benchmark results, graph, and README"
+          file_pattern: "README.md benchmark/benchmark_history.json benchmark_performance.png go.mod go.sum" # Updated graph filename
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
