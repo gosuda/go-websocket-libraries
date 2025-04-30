@@ -30,10 +30,10 @@ const (
 {{.TableStartMarker}}
 **Last Updated:** {{ .Timestamp }}
 
-| Library                                         | Version         | Connections/sec | Throughput (MB/s) | Avg Latency (ms) |
+| Library                                         | Version         | Throughput (MB/s) | Avg Latency (ms) |
 | ----------------------------------------------- | --------------- | --------------- | ----------------- | ---------------- |
 {{- range .Results }}
-| [{{ .LibraryName }}](https://{{ .LibraryName }}) | {{ .Version }} | {{ printf "%.2f" .ConnectionsPerSecond }} | {{ printf "%.2f" .ThroughputMBps }} | {{ printf "%.2f" .LatencyMs }} |
+| [{{ .LibraryName }}](https://github.com/{{ .LibraryName }}) | {{ .Version }} | {{ printf "%.2f" .ThroughputMBps }} | {{ printf "%.2f" .LatencyMs }} |
 {{- end }}
 {{.TableEndMarker}}
 `

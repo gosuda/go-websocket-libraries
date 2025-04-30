@@ -4,6 +4,9 @@ on:
   workflow_dispatch: # Allow manual trigger
   schedule:
     - cron: '43 1 * * *' # Run daily at 10:43 KST (01:43 UTC)
+  push:
+    branches:
+      - main
 
 jobs:
   benchmark:
