@@ -19,8 +19,8 @@ jobs:
 
       - name: Install dependencies and update libraries
         run: |
-          go get -u all
-          go mod tidy # Ensure go.mod and go.sum are consistent
+          go get -u
+          go mod tidy
 
       - name: Run Benchmark
         run: go run ./benchmark/...
@@ -33,6 +33,26 @@ jobs:
       - name: Update README Table
         run: go run ./cmd/update_readme
         # Assumes cmd/update_readme/main.go reads benchmark_history.json and updates README.md
+      
+      - name: Update results
+        run: |
+          cp benchmark/benchmark_history.json results/
+          cp benchmark/benchmark_performance.png results/
+          cp go.mod results/
+          cp go.sum results/
+          cp README.md results/
+
+      - name: Upload build artifact
+        id: upload
+        uses: actions/upload-artifact@v4
+        with:
+          path: results/*
+          name: results.zip
+
+      - uses: actions/attest-build-provenance@v2
+        with:
+          subject-name: results.zip
+          subject-digest: sha256:${{ steps.upload.outputs.artifact-digest }}
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
