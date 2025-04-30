@@ -19,7 +19,8 @@ jobs:
 
       - name: Install dependencies and update libraries
         run: |
-          go get -u
+          go mod download
+          go get -u ./...
           go mod tidy
 
       - name: Run Benchmark
