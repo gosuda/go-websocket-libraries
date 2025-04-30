@@ -16,17 +16,19 @@ Go WebSocket Library Comparison
 
 
 
+
 <!-- BENCHMARK_TABLE_START -->
-**Last Updated:** Wed, 30 Apr 2025 02:13:09 UTC
+**Last Updated:** Wed, 30 Apr 2025 02:21:55 UTC
 
 | Library                                         | Version         | Throughput (MB/s) | Avg Latency (ms) |
 | ----------------------------------------------- | --------------- | ----------------- | ---------------- |
-| [coder/websocket](https://github.com/coder/websocket) | v1.8.13 | 201.96 | 38.23 |
-| [gobwas/ws](https://github.com/gobwas/ws) | v1.4.0 | 284.82 | 27.13 |
-| [gorilla/websocket](https://github.com/gorilla/websocket) | v1.5.3 | 447.93 | 17.25 |
-| [lesismal/nbio](https://github.com/lesismal/nbio) | v1.6.4 | 355.79 | 21.74 |
-| [lxzan/gws](https://github.com/lxzan/gws) | v1.8.8 | 531.08 | 14.65 |
+| [coder/websocket](https://github.com/coder/websocket) | v1.8.13 | 195.59 | 39.43 |
+| [gobwas/ws](https://github.com/gobwas/ws) | v1.4.0 | 278.30 | 27.75 |
+| [gorilla/websocket](https://github.com/gorilla/websocket) | v1.5.3 | 440.83 | 17.53 |
+| [lesismal/nbio](https://github.com/lesismal/nbio) | v1.6.4 | 336.64 | 22.98 |
+| [lxzan/gws](https://github.com/lxzan/gws) | v1.8.8 | 514.11 | 15.12 |
 <!-- BENCHMARK_TABLE_END -->
+
 
 
 
