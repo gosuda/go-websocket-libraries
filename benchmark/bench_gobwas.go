@@ -26,6 +26,7 @@ func gobwasEchoHandler(conn net.Conn) {
 	reader := wsutil.NewReader(conn, ws.StateServerSide)
 	writer := wsutil.NewWriter(conn, ws.StateServerSide, ws.OpText) // Assuming text messages
 
+	var buffer []byte = make([]byte, 8192)
 	for {
 		header, err := reader.NextFrame()
 		if err != nil {
@@ -41,8 +42,14 @@ func gobwasEchoHandler(conn net.Conn) {
 			break
 		}
 
-		// Read the payload
-		payload := make([]byte, header.Length)
+		// Reuse or resize the buffer
+		msgLen := int(header.Length)
+		if cap(buffer) < msgLen {
+			buffer = make([]byte, msgLen)
+		}
+		payload := buffer[:msgLen] // Slice the buffer to the required length
+
+		// Read the payload into the slice
 		_, err = io.ReadFull(reader, payload)
 		if err != nil {
 			log.Printf("gobwas read payload error: %v", err)
