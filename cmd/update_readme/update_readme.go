@@ -31,7 +31,7 @@ const (
 **Last Updated:** {{ .Timestamp }}
 
 | Library                                         | Version         | Throughput (MB/s) | Avg Latency (ms) |
-| ----------------------------------------------- | --------------- | --------------- | ----------------- | ---------------- |
+| ----------------------------------------------- | --------------- | ----------------- | ---------------- |
 {{- range .Results }}
 | [{{ .LibraryName }}](https://github.com/{{ .LibraryName }}) | {{ .Version }} | {{ printf "%.2f" .ThroughputMBps }} | {{ printf "%.2f" .LatencyMs }} |
 {{- end }}
