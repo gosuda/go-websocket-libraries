@@ -1,8 +1,6 @@
 module go-websocket-libraries
 
-go 1.24.0
-
-toolchain go1.24.2
+go 1.26rc1
 
 require (
 	github.com/coder/websocket v1.8.14
