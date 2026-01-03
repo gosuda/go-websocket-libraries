@@ -38,8 +38,8 @@ github.com/klauspost/compress v1.18.2 h1:iiPHWW0YrcFgpBYhsA6D1+fqHssJscY/Tm/y2Uq
 github.com/klauspost/compress v1.18.2/go.mod h1:R0h/fSBs8DE4ENlcrlib3PsXS61voFxhIs2DeRhCvJ4=
 github.com/lesismal/llib v1.2.2 h1:ZoVgP9J58Ju3Yue5jtj8ybWl+BKqoVmdRaN1mNwG5Gc=
 github.com/lesismal/llib v1.2.2/go.mod h1:70tFXXe7P1FZ02AU9l8LgSOK7d7sRrpnkUr3rd3gKSg=
-github.com/lesismal/nbio v1.6.7 h1:EeiH0Vn0v5NG7masYNWugibPdNZZYYBPa0pGj4GOrbg=
-github.com/lesismal/nbio v1.6.7/go.mod h1:mBn1rSIZ+cmOILhvP+/1Mb/JimgA+1LQudlHJUb/aNA=
+github.com/lesismal/nbio v1.6.8 h1:GlEUFvpX+lmWCtjmZmMWzTXqIzyDDFDVtjpXXbpAm5o=
+github.com/lesismal/nbio v1.6.8/go.mod h1:mBn1rSIZ+cmOILhvP+/1Mb/JimgA+1LQudlHJUb/aNA=
 github.com/lxzan/gws v1.8.9 h1:VU3SGUeWlQrEwfUSfokcZep8mdg/BrUF+y73YYshdBM=
 github.com/lxzan/gws v1.8.9/go.mod h1:d9yHaR1eDTBHagQC6KY7ycUOaz5KWeqQtP3xu7aMK8Y=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
