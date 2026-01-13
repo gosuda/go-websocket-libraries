@@ -23,8 +23,8 @@ require (
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/klauspost/compress v1.18.2 // indirect
 	github.com/lesismal/llib v1.2.2 // indirect
-	golang.org/x/crypto v0.46.0 // indirect
-	golang.org/x/image v0.34.0 // indirect
+	golang.org/x/crypto v0.47.0 // indirect
+	golang.org/x/image v0.35.0 // indirect
 	golang.org/x/sys v0.40.0 // indirect
 	golang.org/x/text v0.33.0 // indirect
 )
