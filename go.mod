@@ -7,7 +7,7 @@ require (
 	github.com/gobwas/ws v1.4.0
 	github.com/gorilla/websocket v1.5.3
 	github.com/lesismal/nbio v1.6.8
-	github.com/lxzan/gws v1.9.0
+	github.com/lxzan/gws v1.9.1
 	gonum.org/v1/plot v0.16.0
 )
 
