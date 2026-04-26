@@ -12703,5 +12703,40 @@
     "LatencyMs": 32.09071565290332,
     "Timestamp": "2026-04-25T05:00:45.036887684Z",
     "Version": "v1.8.14"
+  },
+  {
+    "LibraryName": "gorilla/websocket",
+    "ThroughputMBps": 492.028125,
+    "LatencyMs": 15.75724996665587,
+    "Timestamp": "2026-04-26T05:25:55.776253415Z",
+    "Version": "v1.5.3"
+  },
+  {
+    "LibraryName": "lxzan/gws",
+    "ThroughputMBps": 568.4046875,
+    "LatencyMs": 13.68670401534998,
+    "Timestamp": "2026-04-26T05:25:55.776253415Z",
+    "Version": "v1.9.1"
+  },
+  {
+    "LibraryName": "gobwas/ws",
+    "ThroughputMBps": 272.91640625,
+    "LatencyMs": 28.39481239963015,
+    "Timestamp": "2026-04-26T05:25:55.776253415Z",
+    "Version": "v1.4.0"
+  },
+  {
+    "LibraryName": "lesismal/nbio",
+    "ThroughputMBps": 338.89453125,
+    "LatencyMs": 22.828186774554215,
+    "Timestamp": "2026-04-26T05:25:55.776253415Z",
+    "Version": "v1.6.9"
+  },
+  {
+    "LibraryName": "coder/websocket",
+    "ThroughputMBps": 238.25703125,
+    "LatencyMs": 32.45684971259374,
+    "Timestamp": "2026-04-26T05:25:55.776253415Z",
+    "Version": "v1.8.14"
   }
 ]
