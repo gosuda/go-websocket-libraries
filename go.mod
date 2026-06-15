@@ -3,7 +3,7 @@ module go-websocket-libraries
 go 1.26rc1
 
 require (
-	github.com/coder/websocket v1.8.14
+	github.com/coder/websocket v1.8.15
 	github.com/gobwas/ws v1.4.0
 	github.com/gorilla/websocket v1.5.3
 	github.com/lesismal/nbio v1.6.9
