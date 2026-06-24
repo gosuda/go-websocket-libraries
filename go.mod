@@ -6,7 +6,7 @@ require (
 	github.com/coder/websocket v1.8.15
 	github.com/gobwas/ws v1.4.0
 	github.com/gorilla/websocket v1.5.3
-	github.com/lesismal/nbio v1.6.9
+	github.com/lesismal/nbio v1.6.10
 	github.com/lxzan/gws v1.9.1
 	gonum.org/v1/plot v0.17.0
 )
