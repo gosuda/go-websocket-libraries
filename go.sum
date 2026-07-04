@@ -34,10 +34,10 @@ github.com/gorilla/websocket v1.5.3/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/ad
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/klauspost/compress v1.19.0 h1:sXLILfc9jV2QYWkzFOPWStmcUVH2RHEB1JCdY2oVvCQ=
 github.com/klauspost/compress v1.19.0/go.mod h1:cwPg85FWrGar70rWktvGQj8/hthj3wpl0PGDogxkrSQ=
-github.com/lesismal/llib v1.2.2 h1:ZoVgP9J58Ju3Yue5jtj8ybWl+BKqoVmdRaN1mNwG5Gc=
-github.com/lesismal/llib v1.2.2/go.mod h1:70tFXXe7P1FZ02AU9l8LgSOK7d7sRrpnkUr3rd3gKSg=
-github.com/lesismal/nbio v1.6.10 h1:4ktUEmZ++2LGQCul9xQhh16ATDH/AaScEyTxg0eksCk=
-github.com/lesismal/nbio v1.6.10/go.mod h1:mBn1rSIZ+cmOILhvP+/1Mb/JimgA+1LQudlHJUb/aNA=
+github.com/lesismal/llib v1.2.3 h1:ImIIrrg+vPVy+jPam6ofRViH7RNDinGyPITv0vdyp3Y=
+github.com/lesismal/llib v1.2.3/go.mod h1:70tFXXe7P1FZ02AU9l8LgSOK7d7sRrpnkUr3rd3gKSg=
+github.com/lesismal/nbio v1.6.11 h1:UOvZkyqUKSpmzap6lJENVzLt07rK4TgX0oiKO1ebRYQ=
+github.com/lesismal/nbio v1.6.11/go.mod h1:92aHZ51RXX/wkZQopOvGhxyCzNt+xv9Lt/Tt4iwzBo4=
 github.com/lxzan/gws v1.9.1 h1:4lbIp4cW0hOLP3ejFHR/uWRy741AURx7oKkNNi2OT9o=
 github.com/lxzan/gws v1.9.1/go.mod h1:gXHSCPmTGryWJ4icuqy8Yho32E4YIMHH0fkDRYJRbdc=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
