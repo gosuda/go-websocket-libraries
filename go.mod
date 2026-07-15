@@ -6,7 +6,7 @@ require (
 	github.com/coder/websocket v1.8.15
 	github.com/gobwas/ws v1.4.0
 	github.com/gorilla/websocket v1.5.3
-	github.com/lesismal/nbio v1.6.11
+	github.com/lesismal/nbio v1.6.12
 	github.com/lxzan/gws v1.10.0
 	gonum.org/v1/plot v0.17.0
 )
@@ -21,7 +21,7 @@ require (
 	github.com/gobwas/pool v0.2.1 // indirect
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/klauspost/compress v1.19.0 // indirect
-	github.com/lesismal/llib v1.2.3 // indirect
+	github.com/lesismal/llib v1.2.4 // indirect
 	golang.org/x/crypto v0.54.0 // indirect
 	golang.org/x/image v0.44.0 // indirect
 	golang.org/x/sys v0.47.0 // indirect
