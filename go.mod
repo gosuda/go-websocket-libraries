@@ -21,7 +21,7 @@ require (
 	github.com/gobwas/pool v0.2.1 // indirect
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/klauspost/compress v1.20.3 // indirect
-	github.com/lesismal/llib v1.2.4 // indirect
+	github.com/lesismal/llib v1.2.5 // indirect
 	golang.org/x/crypto v0.58.0 // indirect
 	golang.org/x/image v0.47.0 // indirect
 	golang.org/x/sys v0.49.0 // indirect
