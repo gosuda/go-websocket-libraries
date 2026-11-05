@@ -4,7 +4,7 @@ go 1.27.0
 
 require (
 	github.com/coder/websocket v1.8.15
-	github.com/gobwas/ws v1.4.0
+	github.com/gobwas/ws v1.5.0
 	github.com/gorilla/websocket v1.5.3
 	github.com/lesismal/nbio v1.7.2
 	github.com/lxzan/gws v1.10.2
@@ -18,7 +18,6 @@ require (
 	git.sr.ht/~sbinet/gg v0.8.0 // indirect
 	github.com/ajstarks/svgo v0.0.0-20211024235047-1546f124cd8b // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect
-	github.com/gobwas/pool v0.2.1 // indirect
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/klauspost/compress v1.20.3 // indirect
 	github.com/lesismal/llib v1.2.5 // indirect
