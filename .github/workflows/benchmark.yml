@@ -1,15 +1,10 @@
 name: Benchmark WebSocket Libraries
 
 on:
-  workflow_dispatch: # Allow manual trigger
   schedule:
-    - cron: '40 2 * * *'
-  push:
-    branches:
-      - main
+    - cron: '40 2 * * 1'
+  workflow_dispatch:
 
-# Superseded schedule/push runs re-measure the same head; the newest run wins.
-# The auto-commit step republishes regenerated results, so canceling loses nothing.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
