@@ -1,8 +1,6 @@
 name: Benchmark WebSocket Libraries
 
 on:
-  schedule:
-    - cron: '40 2 * * 1'
   workflow_dispatch:
 
 concurrency:
@@ -78,9 +76,9 @@ jobs:
         run: |
           source_sha=$(git rev-parse HEAD)
           predicate=$(jq -c \
-            --arg source "git+https://github.com/$GITHUB_REPOSITORY@refs/heads/main" \
+            --arg source "git+https://github.com/$GITHUB_REPOSITORY@$source_sha" \
             --arg sha "$source_sha" \
-            '.buildDefinition.resolvedDependencies += [{uri: $source, digest: {gitCommit: $sha}}]' \
+            '.buildDefinition.resolvedDependencies += [{name: "benchmarkSource", uri: $source, digest: {gitCommit: $sha}}]' \
             <<< "$PREDICATE")
           printf 'predicate=%s\n' "$predicate" >> "$GITHUB_OUTPUT"
 
