@@ -6,14 +6,15 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: benchmark-publisher
+  cancel-in-progress: false
 
 permissions: {}
 
 jobs:
   benchmark:
     runs-on: depot-ubuntu-24.04
+    timeout-minutes: 60
     permissions:
       id-token: write
       contents: write
@@ -22,6 +23,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Go
         uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
