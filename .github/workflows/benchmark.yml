@@ -1,8 +1,6 @@
 name: Benchmark WebSocket Libraries
 
 on:
-  schedule:
-    - cron: '40 2 * * 1'
   workflow_dispatch:
 
 concurrency:
@@ -67,10 +65,30 @@ jobs:
           path: results/*
           name: results.zip
 
-      - uses: actions/attest-build-provenance@e8998f949152b193b063cb0ec769d69d929409be # v2
+      - name: Generate workflow provenance
+        id: provenance
+        uses: actions/attest-build-provenance/predicate@1176ef556905f349f669722abf30bce1a6e16e01 # predicate@1.1.5
+
+      - name: Add the measured source revision
+        id: measured-source
+        env:
+          PREDICATE: ${{ steps.provenance.outputs.predicate }}
+        run: |
+          source_sha=$(git rev-parse HEAD)
+          predicate=$(jq -c \
+            --arg source "git+https://github.com/$GITHUB_REPOSITORY@$source_sha" \
+            --arg sha "$source_sha" \
+            '.buildDefinition.resolvedDependencies += [{name: "benchmarkSource", uri: $source, digest: {gitCommit: $sha}}]' \
+            <<< "$PREDICATE")
+          printf 'predicate=%s\n' "$predicate" >> "$GITHUB_OUTPUT"
+
+      - name: Attest the results and measured source
+        uses: actions/attest@ce27ba3b4a9a139d9a20a4a07d69fabb52f1e5bc # v2.4.0
         with:
           subject-name: results.zip
           subject-digest: sha256:${{ steps.upload.outputs.artifact-digest }}
+          predicate-type: ${{ steps.provenance.outputs.predicate-type }}
+          predicate: ${{ steps.measured-source.outputs.predicate }}
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
@@ -80,3 +98,4 @@ jobs:
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+

@@ -29,4 +29,7 @@ Go WebSocket Library Comparison
 ![Benchmark Performance Graph](benchmark_performance.png)
 ## Benchmark environment
 
-The Depot migration PR moves measurement from GitHub-hosted `ubuntu-latest` to `depot-ubuntu-24.04`. Results recorded before and after that migration use different machines. Do not interpret a change across that boundary as a library improvement or regression. The weekly/manual publisher checks out current `main`; queued refreshes coalesce, and an older rerun cannot cancel an active measurement. Depot runtime and billing savings have not been measured.
+On 2026-11-26, measurement moved from GitHub-hosted `ubuntu-latest` to `depot-ubuntu-24.04`. Results recorded before and after that date use different machines. Do not interpret a change across that boundary as a library improvement or regression.
+
+The publisher runs on explicit workflow dispatch and checks out current `main`. Automatic weekly runs are disabled. Workflow dispatch is supported by the [GitHub workflow provenance build type](https://github.com/actions/buildtypes/blob/main/workflow/v1/README.md). The attestation keeps the workflow's triggering revision and identifies the measured source in the dependency named `benchmarkSource`, whose URI contains its immutable commit. Consumers select that name instead of relying on dependency order. The result bundle includes the dependency files used for the measurement. Runs using this workflow share a non-cancelling publisher group, with pending refreshes coalesced. Reruns of older, immutable workflow definitions can still overlap; ordinary non-forced pushes reject stale histories. Depot runtime and billing savings have not been measured.
+
