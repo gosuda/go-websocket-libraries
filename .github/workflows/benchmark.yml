@@ -8,9 +8,17 @@ on:
     branches:
       - main
 
+# Superseded schedule/push runs re-measure the same head; the newest run wins.
+# The auto-commit step republishes regenerated results, so canceling loses nothing.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
 jobs:
   benchmark:
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-24.04
     permissions:
       id-token: write
       contents: write
@@ -23,7 +31,8 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: 'stable'
+          go-version: '1.27'
+          cache: true
 
       - name: Install dependencies and update libraries
         run: |
