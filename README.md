@@ -27,3 +27,6 @@ Go WebSocket Library Comparison
 **Performance Over Time: Throughput (MB/s):**
 
 ![Benchmark Performance Graph](benchmark_performance.png)
+## Benchmark environment
+
+The Depot migration PR moves measurement from GitHub-hosted `ubuntu-latest` to `depot-ubuntu-24.04`. Results recorded before and after that migration use different machines. Do not interpret a change across that boundary as a library improvement or regression. The weekly/manual publisher checks out current `main`; queued refreshes coalesce, and an older rerun cannot cancel an active measurement. Depot runtime and billing savings have not been measured.
